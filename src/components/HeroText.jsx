@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 
 
 const HeroText = () => {
-    const words = ["Secure", "Modern", "Scalable"];
+    const words = ["Frontend", "Backend", "UI/UX Designer"]; 
     const variants = {
         hidden: { opacity: 0, x: -50 },
         visible: { opacity: 1, x: 0 }
@@ -20,7 +20,7 @@ const HeroText = () => {
             initial="hidden"
             animate="visible"
             transition={{ delay: 1 }}>
-                Hello I'm Akmal
+                Halo, Saya Akmal
             </motion.h1>
             <div className="flex flex-col items-start">
                 <motion.p 
@@ -29,7 +29,7 @@ const HeroText = () => {
                     initial="hidden"
                     animate="visible"
                     transition={{ delay: 1.2 }}>
-                    A Developer <br /> Dedicated to Crafting
+                   Membangun Pengalaman<br />Digital Sebagai
                 </motion.p>
                 <motion.div 
                     variants={variants}
@@ -45,7 +45,7 @@ const HeroText = () => {
                     animate="visible"
                     transition={{ delay: 1.8 }}
                     className="text-4xl font-medium text-neutral-300">
-                    Web Solutions
+                    Platform Digital
                 </motion.p>
             </div>
         </div>
@@ -57,7 +57,7 @@ const HeroText = () => {
                 initial="hidden"
                 animate="visible"
                 transition={{ delay: 1 }}>
-                Hello I'm Akmal
+                 Halo, Saya Akmal
             </motion.p>
             <div className="">
                 <motion.p 
@@ -66,7 +66,7 @@ const HeroText = () => {
                 initial="hidden"
                 animate="visible"
                 transition={{ delay: 1.2 }}>
-                    Building
+                   Pengembang
                 </motion.p>
                 <motion.div
                 variants={variants}
@@ -83,7 +83,7 @@ const HeroText = () => {
                 animate="visible"
                 transition={{ delay: 1.8 }}
                 >
-                    Web Aplications
+                    Web Aplikasi
                 </motion.p>
             </div>
         </div>

@@ -1,6 +1,8 @@
 // About.jsx
 import {useRef} from 'react';
 import Card from '../components/Card';
+import { Globe } from '../components/Globe';
+import CopyEmailButton from '../components/CopyEmailButton';
 
 const About = () => {
   const grid2Container = useRef();
@@ -56,18 +58,23 @@ const About = () => {
           {/* Grid 3 */}
             <div className="grid-black-color grid-3">
               <div className="z-10 w-[50%]">
-                <p className="headtext">Time Zone</p>
+                <p className="headtext">Zona Waktu - WIB</p>
                 <p className="subtext">
-                  I,M based in Lumajang, East Java, Indonesian. And open to remote work worldwide.
+                 Saya berdomisili di Lumajang, Jawa Timur, Indonesia, dan terbuka untuk pekerjaan remote di seluruh dunia.
                 </p>
-                <figure className="absolute left-[30$] right-[10%]">
-                  
+                <figure className="absolute left-[30%] right-[10%] -mt-20">
+                  <Globe />
                 </figure>
               </div>
             </div>
           {/* Grid 4 */}
           <div className="grid-special-color grid-4">
-
+            <div className="flex flex-col items-center justify-center gap-4 size-full">
+              <p className="text-center headtext">
+                Tertarik memulai proyek bersama ?
+              </p>
+              <CopyEmailButton/>
+            </div>
           </div>
           {/* Grid 5 */}
             <div className="grid-default-color grid-5   ">

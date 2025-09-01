@@ -1,10 +1,10 @@
 "use client";
 
-import createGlobe, { COBEOptions } from "cobe";
+import createGlobe from "cobe";
 import { useMotionValue, useSpring } from "motion/react";
 import { useEffect, useRef } from "react";
 
-import { cn } from "@/lib/utils";
+import { twMerge } from "tailwind-merge";
 
 const MOVEMENT_DAMPING = 1400;
 
@@ -15,12 +15,12 @@ const GLOBE_CONFIG= {
   devicePixelRatio: 2,
   phi: 0,
   theta: 0.3,
-  dark: 0,
+  dark: 0.9,
   diffuse: 0.4,
-  mapSamples: 16000,
-  mapBrightness: 1.2,
+  mapSamples: 160000,
+  mapBrightness: 1,
   baseColor: [1, 1, 1],
-  markerColor: [251 / 255, 100 / 255, 21 / 255],
+  markerColor: [1, 1, 1],
   glowColor: [1, 1, 1],
   markers: [
     { location: [14.5995, 120.9842], size: 0.03 },
@@ -43,8 +43,8 @@ export function Globe({
 ) {
   let phi = 0;
   let width = 0;
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const pointerInteracting = useRef<number | null>(null);
+  const canvasRef = useRef(null);
+  const pointerInteracting = useRef(null);
   const pointerInteractionMovement = useRef(0);
 
   const r = useMotionValue(0);
@@ -100,14 +100,14 @@ export function Globe({
 
   return (
     <div
-      className={cn(
-        "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]",
+      className={twMerge(
+        "mx-auto aspect-[1/1] w-full max-w-[450px]",
         className,
       )}
     >
       <canvas
-        className={cn(
-          "size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]",
+        className={twMerge(
+          "size-[30rem] opacity-0 transition-opacity duration-500 [contain:layout_paint_size]",
         )}
         ref={canvasRef}
         onPointerDown={(e) => {

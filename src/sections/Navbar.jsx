@@ -7,27 +7,27 @@ function Navigation() {
         <ul className="nav-ul">
             <li className="nav-li">
                 <a href="#home" className="nav-link">
-                    Home
+                    Beranda
                 </a>
             </li>
             <li className="nav-li">
                 <a href="#about" className="nav-link">
-                    About
+                    Tentang
                 </a>
             </li>
             <li className="nav-li">
                 <a href="#work" className="nav-link">
-                    Work
+                    pekerjaan
                 </a>
             </li>
             <li className="nav-li">
                 <a href="#contact" className="nav-link">
-                    Contact
+                    Kontak
                 </a>
             </li>
             <li className="nav-li">
                 <a href="#project" className="nav-link">
-                    Project
+                    Projek
                 </a>
             </li>
         </ul>
