@@ -14,7 +14,7 @@ const handleMouseMove = (e) => {
 };
 const [preview, setPreview] = useState(null);
   return (
-    <section onMouseMove={handleMouseMove} className="relative c-space section-spacing">
+    <section id="project " onMouseMove={handleMouseMove} className="relative c-space section-spacing">
       <div className="c-space">
           <h2 className="text-heading">Proyek Pilihan Saya</h2>
             <div className="bg-gradient-to-r from-transparent 

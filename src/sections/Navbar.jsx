@@ -1,32 +1,36 @@
 import {useState} from 'react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 
-function Navigation() {
+function Navigation({onNavigate}) {
+    const handleClick = () => {
+    onNavigate?.(); // tutup menu mobile setelah klik
+  };
+
     return(
         <ul className="nav-ul">
             <li className="nav-li">
-                <a href="#home" className="nav-link">
+                <a href="#home" className="nav-link" onClick={handleClick}>
                     Beranda
                 </a>
             </li>
             <li className="nav-li">
-                <a href="#about" className="nav-link">
+                <a href="#about" className="nav-link" onClick={handleClick}>
                     Tentang
                 </a>
             </li>
             <li className="nav-li">
-                <a href="#work" className="nav-link">
-                    pekerjaan
+                <a href="#work" className="nav-link" onClick={handleClick}>
+                    pendidikan
                 </a>
             </li>
             <li className="nav-li">
-                <a href="#contact" className="nav-link">
+                <a href="#contact" className="nav-link" onClick={handleClick}>
                     Kontak
                 </a>
             </li>
             <li className="nav-li">
-                <a href="#project" className="nav-link">
+                <a href="#project" className="nav-link" onClick={handleClick}>
                     Projek
                 </a>
             </li>
@@ -54,7 +58,7 @@ const[isOpen, setIsOpen] = useState(false);
             </div>
         </div>
         {isOpen &&( 
-        < motion.div 
+        <motion.div 
             className="block overflow-hidden text-center sm:hidden"
             initial={{ opacity:0, x: -10 }}
             animate={{ opacity:1, x: 0 }}

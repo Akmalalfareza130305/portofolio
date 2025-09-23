@@ -2,7 +2,7 @@ import { mySocials } from "../constants";
 
 const Footer = () => {
   return (
-    <section className="c-space pb-3 text-sm text-neutral-400">
+    <section id="footer" className="c-space pb-3 text-sm text-neutral-400">
       {/* Divider */}
       <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-700 to-transparent mb-4" />
 

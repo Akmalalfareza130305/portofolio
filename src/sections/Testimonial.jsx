@@ -34,7 +34,7 @@ const ReviewCard = ({
 
 export default function Testimonial() {
   return (
-    <div className="items-start mt-25 md:mt-35 c-space">
+    <div id="testimonial" className="items-start mt-25 md:mt-35 c-space">
         <h2 className="text-heading">Cerita Mereka, Kebanggaan Saya</h2>
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden mt-12 ">
         <Marquee pauseOnHover className="[--duration:20s]">
